@@ -11,4 +11,4 @@ jobs:
     uses: actions/upload-artifact
     with:
      - name: ${{ARTIFACT_NAME}}
-      path: .
+       path: .
