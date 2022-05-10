@@ -1,0 +1,14 @@
+name: artifact
+on: [push]
+env: 
+ ARTIFACT_NAME: my-artifact
+jobs:
+ runs-on: ununtu-latest
+ steps:
+  - name: checkout the code
+    uses: actions/checkout
+  - name: upload artifact
+    uses: actions/upload-artifact
+    with:
+     - name: ${{ARTIFACT_NAME}}
+      path: .
